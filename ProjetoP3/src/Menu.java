@@ -1,11 +1,34 @@
+import java.util.Scanner;
+
+
+import user.cliente;
+
 public class Menu {
+        Scanner in = new Scanner (System.in);
+
+        
+        String nomeCliente;
+        int cpf, cliente;
+        String senha;
+        
+
+         {
+                exibeMenu();
+                cliente = in.nextInt();
+                in.nextLine();
+                switch (cliente) {
+                        case 1: // cadastro do cliente (criar lista de clientes)
+                                System.out.println("Insira seu nome: ");
+                                nomeCliente = in.nextLine();
+                                System.out.println("Insira seu CPF: ");
+                                cpf = in.nextInt();
+                                System.out.println("Crie uma senha: ");
+                                senha = in.nextLine();
+                                
+                                break;
+                }
     
-    private String user;
-    private String adm;
-    private String cliente;
-    
-    
-}
+
 
     
 public static void exibeMenu() {
@@ -26,5 +49,7 @@ public static void exibeMenuDePagamento() {
         System.out.println("1- Crédito");
         System.out.println("2- Débito");
         System.out.println("3- Pix");
+
+}
 
 }
