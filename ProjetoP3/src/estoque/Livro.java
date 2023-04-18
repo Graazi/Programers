@@ -1,10 +1,17 @@
 package estoque;
-public class Produto {
+public class Livro {
     private String nome;
     private double preco;
     private int quantEst;
     private int [] codProd;
     
+    public Livro(String nome, double preco, int quantEst, int [] codProd) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantEst = quantEst;
+        this.codProd = codProd;
+    }
+
     public String getNome() {
         return nome;
     }
