@@ -27,10 +27,10 @@ public class Pagamento {
         this.pix = pix;
     }
     public String getCartão() {
-        return cartão;
+        return cartao;
     }
     public void setCartão(String cartão) {
-        this.cartão = cartão;
+        this.cartao = cartão;
     }
     
 }
