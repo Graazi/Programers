@@ -6,8 +6,9 @@ public class Menu {
         Scanner in = new Scanner(System.in);
 
         String nomeCliente;
-        int cpf, cliente;
+        int cpf, cliente, pagamento;
         String senha;
+        
 
         {
                 exibeMenu();
@@ -22,6 +23,21 @@ public class Menu {
                                 System.out.println("Crie uma senha: ");
                                 senha = in.nextLine();
                                 
+                                break;
+                }
+
+                switch (pagamento) {
+                        case 1: // pagamento no cartão
+                                System.out.println("Pagamento Aprovado! Volte sempre!");
+                                break;
+                        case 2: // pagamento no boleto
+                                System.out.println("Pagamento Aprovado! Volte sempre!");
+                                break;
+                        case 3: // pagamento no pix
+                                System.out.println("Pagamento Aprovado! Volte sempre!");
+                                break;
+                        default:
+                                System.out.println("Opção inválida! Volte sempre!");
                                 break;
                 }
 
@@ -40,8 +56,8 @@ public class Menu {
         public static void exibeMenuDePagamento() {
                 System.out.println(" ");
                 System.out.println("Escolha uma forma de pagamento: ");
-                System.out.println("1- Crédito");
-                System.out.println("2- Débito");
+                System.out.println("1- Cartão");
+                System.out.println("2- Boleto");
                 System.out.println("3- Pix");
 
         }
