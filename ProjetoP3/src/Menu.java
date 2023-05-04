@@ -40,6 +40,7 @@ public class Menu {
                                 System.out.println("Opção inválida! Volte sempre!");
                                 break;
                 }
+        }
 
         public static void exibeMenu() {
                 System.out.println("Opções:");
