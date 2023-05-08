@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import user.cliente;
-
 public class Menu {
         Scanner in = new Scanner(System.in);
 
