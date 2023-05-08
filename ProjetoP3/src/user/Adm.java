@@ -1,6 +1,6 @@
 package user;
 
-public class adm {
+public class Adm {
     private String login;
     private String senha;
     

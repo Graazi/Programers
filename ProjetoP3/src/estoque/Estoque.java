@@ -5,7 +5,7 @@ public abstract class Estoque {
     private int quantidade;
     private int codProduto;
 
-    public void estoque (String nome, int quantidade, int codProduto) {
+    public Estoque (String nome, int quantidade, int codProduto) {
         this.nome = nome;
         this.quantidade = quantidade;
         this.codProduto = codProduto;

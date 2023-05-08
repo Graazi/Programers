@@ -22,6 +22,8 @@ public class Menu {
                                 senha = in.nextLine();
                                 
                                 break;
+                        case 2:
+
                 }
 
                 switch (pagamento) {
@@ -43,7 +45,7 @@ public class Menu {
         public static void exibeMenu() {
                 System.out.println("Opções:");
                 System.out.println("1 - Cadastro de Cliente");
-                System.out.println("2 - Adcionar livro do carrinho");
+                System.out.println("2 - Adicionar livro no carrinho");
                 System.out.println("3 - Remover livro do carrinho");
                 System.out.println("4 - Ver Carrinho");
                 System.out.println("5 - Exibir a Parcial");

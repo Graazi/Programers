@@ -3,9 +3,9 @@ public class Livro {
     private String nome;
     private double preco;
     private int quantEst;
-    private int [] codProd;
+    private int codProd;
     
-    public Livro(String nome, double preco, int quantEst, int [] codProd) {
+    public Livro(String nome, double preco, int quantEst, int codProd) {
         this.nome = nome;
         this.preco = preco;
         this.quantEst = quantEst;
@@ -30,10 +30,10 @@ public class Livro {
     public void setQuantEst(int quantEst) {
         this.quantEst = quantEst;
     }
-    public int[] getCodProd() {
+    public int getCodProd() {
         return codProd;
     }
-    public void setCodProd(int[] codProd) {
+    public void setCodProd(int codProd) {
         this.codProd = codProd;
     }
     

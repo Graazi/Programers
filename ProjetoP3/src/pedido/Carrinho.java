@@ -6,7 +6,7 @@ public class Carrinho {
     private int numero;
     private double preco;
 
-    public void pedido (String livro, int numero, double preco) {
+    public Carrinho (String livro, int numero, double preco) {
         this.livro = livro;
         this.numero = numero;
         this.preco = preco;
