@@ -17,4 +17,5 @@ public class adm {
         this.senha = senha;
     }
     
+    //metódos de adicionar e buscar cliente (usuario) 
 }
