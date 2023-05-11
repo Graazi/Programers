@@ -1,18 +1,25 @@
 import java.util.Scanner;
 
+import estoque.Livro;
+import pedido.Carrinho;
+
 public class Menu {
+        public static void main (String []args) throws Exception {
         Scanner in = new Scanner(System.in);
 
-        String nomeCliente;
+        String nomeCliente, livro;
+        int op, op2, numeroPedido = 0;
         int cpf, cliente, pagamento;
         String senha;
+        double preco;
+        Carrinho pedidoNovo; 
         
 
         {
                 exibeMenu();
-                cliente = in.nextInt();
+                op = in.nextInt();
                 in.nextLine();
-                switch (cliente) {
+                switch (op) {
                         case 1: // cadastro do cliente (criar lista de clientes)
                                 System.out.println("Insira seu nome: ");
                                 nomeCliente = in.nextLine();
@@ -22,11 +29,35 @@ public class Menu {
                                 senha = in.nextLine();
                                 
                                 break;
-                        case 2:
+                        case 2://adicionar pedido
+                        System.out.println("Insira seu pedido: ");
+                                        System.out.println("Livro: ");
+                                        livro = in.nextLine();
+                                        numeroPedido++;
+                                        System.out.println(" Preço :");
+                                        preco = in.nextInt();
+                                        pedidoNovo = new Carrinho(livro, numeroPedido, preco);
+                                        break;
+                        case 3: // cancelar pedido (remover algum item da lista)
+                                System.out.println("Insira o código do pedido você gostaria de retirar: ");
+                                int codPedido = in.nextInt();
+                                break;
+                        case 4: // ver carrinho
+                                System.out.println("Carrinho: ");
+                                        
+                                        break;
+                        case 5: // exibir a parcial (mostrar todos os itens pedidos até o momento)
+                                System.out.println("Parcial do pedido " +  + ":");
+                                        
+                                        break;
+                        case 6: // fechar o pedido e realizar pagamento
+                                System.out.println("Seus pedidos foram: ");
+                                        
+                                        exibeMenuDePagamento();
+                                        op2 = in.nextInt(); in.nextLine();
 
-                }
-
-                switch (pagamento) {
+                                       
+                switch (op2) {
                         case 1: // pagamento no cartão
                                 System.out.println("Pagamento Aprovado! Volte sempre!");
                                 break;
@@ -39,7 +70,19 @@ public class Menu {
                         default:
                                 System.out.println("Opção inválida! Volte sempre!");
                                 break;
-                }
+                                }
+                                break;
+
+                        case 7: // cancelar pedido (remover algum item da lista)
+
+                        case 0:
+                                System.out.println("Tchau! Obrigada por utilizar nosso app!!");
+                                break;
+                        default:
+                                System.out.println("Opção inválida");
+                                break;
+                        }
+                } while (op != 0);
         }
 
         public static void exibeMenu() {
