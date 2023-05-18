@@ -1,3 +1,4 @@
+//herança
 package estoque;
 public class Livro extends Itens {
 
