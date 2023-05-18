@@ -1,4 +1,4 @@
-package Exeções;
+package exeções;
 
 public class ExeptionItem {
     
