@@ -1,4 +1,4 @@
-package pedido;
+package pagamento;
 
 public class Pagamento {
 
