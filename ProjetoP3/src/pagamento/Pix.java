@@ -1,11 +1,10 @@
 package pagamento;
 
-public class Pix implements ValidarPagamento{
+public class Pix implements ValidarPagamento {
 
-    
-    private boolean pixRealizado;
     private String bandeira;
     private double valor;
+    private boolean pixRealizado;
 
    
     public Pix(String bandeira, double valor, boolean pixRealizado) {
@@ -22,10 +21,42 @@ public class Pix implements ValidarPagamento{
 
             return true;
             
-        }else{
+        } else {
             return false;
         }
 
     }
+
+
+    public String getBandeira() {
+        return bandeira;
+    }
+
+
+    public void setBandeira(String bandeira) {
+        this.bandeira = bandeira;
+    }
+
+
+    public double getValor() {
+        return valor;
+    }
+
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+
+    public boolean isPixRealizado() {
+        return pixRealizado;
+    }
+
+
+    public void setPixRealizado(boolean pixRealizado) {
+        this.pixRealizado = pixRealizado;
+    }
+
+    
     
 }
