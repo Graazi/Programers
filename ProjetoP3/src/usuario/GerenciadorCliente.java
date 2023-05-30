@@ -21,7 +21,7 @@ public class GerenciadorCliente {
         this.clientes = clientes;
     }
 
-    public void addCliente(Paciente p){
+    public void addCliente(Cliente c){
         if(buscar(c) == null){
             clientes.getClientes().add(c);
             System.out.println("Cliente adicionado ao sistema!");
@@ -57,7 +57,7 @@ public class GerenciadorCliente {
             System.out.println("Lista de cientes vazia!");
         else {
             for(int i = 0; i < clientes.getClientes().size(); i++){
-                System.out.println(i + " - Nome: '" + pacientes.getPacientes().get(i).getNome() + "'. CPF: '" +
+                System.out.println(i + " - Nome: '" + clientes.getClientes().get(i).getNome() + "'. CPF: '" +
                         clientes.getClientes().get(i).getCpf() + "'. Senha: '" + clientes.getClientes().get(i).getSenha() + "'");
             }
         }

@@ -1,9 +1,10 @@
+import usuario.Cliente;
 import java.util.ArrayList;
 
 public class ListaCliente {
-    private ArrayList<Paciente> clientes;
+    private ArrayList<Cliente> clientes;
 
-    public ListaCliente(ArrayList<Paciente> clientes) {
+    public ListaCliente(ArrayList<Cliente> clientes) {
         this.clientes  = clientes;
     }
 
