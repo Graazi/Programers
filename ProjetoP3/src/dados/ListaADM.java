@@ -1,21 +1,22 @@
+import usuario.ADM;
 import java.util.ArrayList;
 
 public class ListaADM {
-    private ArrayList<Usuario> adm;
+    private ArrayList<ADM> adm;
 
     public ListaADM() {
         adm = new ArrayList<>();
     }
 
-    public ListaADM(ArrayList<Usuario> adm) {
+    public ListaADM(ArrayList<ADM> adm) {
         this.adm = adm;
     }
 
-    public ArrayList<Usuario> getAdm() {
+    public ArrayList<ADM> getAdm() {
         return adm;
     }
 
-    public void setAdm (ArrayList<Usuario> adm) {
+    public void setAdm (ArrayList<ADM> adm) {
         this.adm = adm;
     }
 
