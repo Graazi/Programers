@@ -1,11 +1,11 @@
+package estoque;
 import java.util.Scanner;
 
-import estoque.Carrinho;
-import estoque.Produto;
+
 
 public class Menu {
         private static Carrinho carrinho = new Carrinho();
-        private static ADM areaAdministrativa = new ADM();
+        private static ADM adm = new ADM();
         private static Scanner scanner = new Scanner(System.in);
     
         public static void main(String[] args) {
@@ -84,7 +84,7 @@ public class Menu {
             System.out.print("Digite o título do produto: ");
             String titulo = scanner.nextLine();
     
-            Produto produto = areaAdministrativa.buscarProdutoPorTitulo(titulo);
+            Produto produto = ADM.buscarProdutoPorTitulo(titulo);
             if (produto != null) {
                 carrinho.removerItem(produto);
             } else {
