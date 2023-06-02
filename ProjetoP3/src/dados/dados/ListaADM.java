@@ -1,3 +1,5 @@
+package dados;
+
 import usuario.ADM;
 import java.util.ArrayList;
 

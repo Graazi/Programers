@@ -27,15 +27,15 @@ public class GerenciadorADM {
 
     public void addADM(ADM a){
         if (buscar(a) == null) {
-            adms.getAdms().add(a);
+            adms.getAdm().add(a);
         }
     }
 
     public ADM buscar(ADM a){
-        if(!adms.getAdms().isEmpty()){
+        if(!adms.getAdm().isEmpty()){
             int aux = 0;
-            while(aux < adms.getAdms().size()){
-                if(a.compareTo(adms.getAdms().get(aux)) == 0)
+            while(aux < adms.getAdm().size()){
+                if(a.compareTo(adms.getAdm().get(aux)) == 0)
                     return a;
                 aux++;
             }
@@ -44,10 +44,10 @@ public class GerenciadorADM {
     }
 
     public int buscarInt(ADM a){
-        if(!adms.getAdms().isEmpty()){
+        if(!adms.getAdm().isEmpty()){
             int aux = 0;
-            while(aux < adms.getAdms().size()){
-                if(a.compareTo(adms.getAdms().get(aux)) == 0)
+            while(aux < adms.getAdm().size()){
+                if(a.compareTo(adms.getAdm().get(aux)) == 0)
                     return aux;
                 aux++;
             }
@@ -58,17 +58,17 @@ public class GerenciadorADM {
     public void deleteUsuario(ADM a, int i){
         if(!Objects.equals(a.getMatricula(), "M000")) {
             if (buscar(a) != null)
-                adms.getAdms().remove(i);
+                adms.getAdm().remove(i);
         }
     }
 
     public void exibirLista(){
-        if(adms.getAdms().isEmpty())
+        if(adms.getAdm().isEmpty())
             System.out.println("Lista de administração vazia");
         else {
-            for(int i = 0; i < adms.getAdms().size(); i++){
-                System.out.println(i + " - Nome: '" + adms.getAdms().get(i).getNome() + "'. CPF: '" +
-                        adms.getAdms().get(i).getCpf() + "'. Matricula: '" + adms.getAdms().get(i).getMatricula() + "'");
+            for(int i = 0; i < adms.getAdm().size(); i++){
+                System.out.println(i + " - Nome: '" + adms.getAdm().get(i).getNome() + "'. CPF: '" +
+                        adms.getAdm().get(i).getCpf() + "'. Matricula: '" + adms.getAdm().get(i).getMatricula() + "'");
             }
         }
     }
