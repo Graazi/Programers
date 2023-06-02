@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+import estoque.Carrinho;
+import estoque.Produto;
+
 public class Menu {
         private static Carrinho carrinho = new Carrinho();
         private static ADM areaAdministrativa = new ADM();

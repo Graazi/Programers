@@ -1,6 +1,5 @@
 package estoque;
 
-
 abstract class Produto {
     private String titulo;
     private double preco;
