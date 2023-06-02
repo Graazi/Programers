@@ -1,6 +1,6 @@
 package estoque;
 
-// Classe abstrata para representar um produto
+
 abstract class Produto {
     private String titulo;
     private double preco;
@@ -18,6 +18,5 @@ abstract class Produto {
         return preco;
     }
 
-    // Método abstrato para exibir detalhes do produto
     public abstract void exibirDetalhes();
 }

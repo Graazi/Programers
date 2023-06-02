@@ -1,11 +1,12 @@
 package usuario;
 
 import java.util.ArrayList;
+import java.util.List;
 
-class AreaAdministrativa {
-    private Lista<Produto> produtos;
+class ADM {
+    private List <Produto> produtos;
 
-    public AreaAdministrativa() {
+    public ADM() {
         produtos = new ArrayList<>();
     }
 

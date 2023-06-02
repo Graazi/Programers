@@ -1,9 +1,10 @@
 package pedido;
 
+import java.util.List;
 import java.util.ArrayList;
 
 class Carrinho {
-    private Lista<Produto> itens;
+    private List <Produto> itens;
 
     public Carrinho() {
         itens = new ArrayList<>();

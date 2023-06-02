@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-public class LivrariaOnline {
-        private static CarrinhoCompras carrinhoCompras = new CarrinhoCompras();
-        private static AreaAdministrativa areaAdministrativa = new AreaAdministrativa();
+public class Menu {
+        private static Carrinho carrinho = new Carrinho();
+        private static ADM areaAdministrativa = new ADM();
         private static Scanner scanner = new Scanner(System.in);
     
         public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class LivrariaOnline {
             do {
                 exibirMenu();
                 opcao = scanner.nextInt();
-                scanner.nextLine(); // Limpar o buffer do scanner
+                scanner.nextLine();
     
                 switch (opcao) {
                     case 1:
@@ -61,7 +61,7 @@ public class LivrariaOnline {
             System.out.print("Digite o nome do usuário: ");
             String nome = scanner.nextLine();
     
-            // Código para cadastrar o usuário...
+           
             System.out.println("Usuário cadastrado com sucesso!");
         }
     
@@ -69,9 +69,9 @@ public class LivrariaOnline {
             System.out.print("Digite o título do produto: ");
             String titulo = scanner.nextLine();
     
-            Produto produto = areaAdministrativa.buscarProdutoPorTitulo(titulo);
+            Produto produto = ADM.buscarProdutoPorTitulo(titulo);
             if (produto != null) {
-                carrinhoCompras.adicionarItem(produto);
+                carrinho.adicionarItem(produto);
             } else {
                 System.out.println("Produto não encontrado.");
             }
@@ -83,19 +83,18 @@ public class LivrariaOnline {
     
             Produto produto = areaAdministrativa.buscarProdutoPorTitulo(titulo);
             if (produto != null) {
-                carrinhoCompras.removerItem(produto);
+                carrinho.removerItem(produto);
             } else {
                 System.out.println("Produto não encontrado.");
             }
         }
     
         public static void exibirCarrinho() {
-            carrinhoCompras.exibirCarrinho();
+            carrinho.exibirCarrinho();
         }
     
         public static void exibirAreaAdministrativa() {
-            // Autenticação de usuário na área administrativa...
-            // Código de exemplo:
+            
             System.out.print("Digite o usuário: ");
             String usuario = scanner.nextLine();
     
@@ -103,20 +102,20 @@ public class LivrariaOnline {
             String senha = scanner.nextLine();
     
             if (usuario.equals("admin") && senha.equals("admin123")) {
-                // Acesso permitido à área administrativa
+                
                 int opcao;
     
                 do {
                     exibirMenuAreaAdministrativa();
                     opcao = scanner.nextInt();
-                    scanner.nextLine(); // Limpar o buffer do scanner
+                    scanner.nextLine(); 
     
                     switch (opcao) {
                         case 1:
                             listarProdutosAreaAdministrativa();
                             break;
                         case 2:
-                            // Outras funcionalidades da área administrativa...
+                            
                             break;
                         case 0:
                             System.out.println("Retornando ao menu principal...");
@@ -140,7 +139,7 @@ public class LivrariaOnline {
     
         public static void listarProdutosAreaAdministrativa() {
             System.out.println("Produtos cadastrados na área administrativa:");
-            for (Produto produto : areaAdministrativa.getProdutos()) {
+            for (Produto produto : ADM.getProdutos()) {
                 produto.exibirDetalhes();
             }
         }
@@ -151,11 +150,11 @@ public class LivrariaOnline {
     
             System.out.print("Digite o preço do produto: ");
             double preco = scanner.nextDouble();
-            scanner.nextLine(); // Limpar o buffer do scanner
+            scanner.nextLine(); 
     
-            // Código para cadastrar um novo produto na área administrativa...
+           
             Produto produto = new Produto(titulo, preco);
-            areaAdministrativa.adicionarProduto(produto);
+            ADM.adicionarProduto(produto);
     
             System.out.println("Produto adicionado com sucesso!");
         }
@@ -164,9 +163,9 @@ public class LivrariaOnline {
             System.out.print("Digite o título do produto: ");
             String titulo = scanner.nextLine();
     
-            Produto produto = areaAdministrativa.buscarProdutoPorTitulo(titulo);
+            Produto produto = ADM.buscarProdutoPorTitulo(titulo);
             if (produto != null) {
-                areaAdministrativa.removerProduto(produto);
+                ADM.removerProduto(produto);
                 System.out.println("Produto removido com sucesso!");
             } else {
                 System.out.println("Produto não encontrado.");
