@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-import estoque.Livro;
 import pedido.Carrinho;
 
 public class Menu {
@@ -47,7 +46,7 @@ public class Menu {
                                         
                                         break;
                         case 5: // exibir a parcial (mostrar todos os itens pedidos até o momento)
-                                System.out.println("Parcial do pedido " +  + ":");
+                                System.out.println("Parcial do pedido:");
                                         
                                         break;
                         case 6: // fechar o pedido e realizar pagamento
