@@ -1,9 +1,7 @@
 package usuario;
 
-import usuario.ADM;
 import dados.ListaADM;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class GerenciadorADM {

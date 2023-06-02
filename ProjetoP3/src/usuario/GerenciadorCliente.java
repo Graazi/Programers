@@ -1,6 +1,5 @@
 package usuario;
 import dados.ListaCliente;
-import java.util.ArrayList;
 
 public class GerenciadorCliente {
     private ListaCliente clientes;
@@ -10,7 +9,7 @@ public class GerenciadorCliente {
     }
 
     public GerenciadorCliente(ListaCliente clientes) {
-        this.pacientes = clientes;
+        this.clientes = clientes;
     }
 
     public ListaCliente getClientes() {
