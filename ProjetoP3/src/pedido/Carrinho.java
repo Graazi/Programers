@@ -1,40 +1,28 @@
 package pedido;
 
-public class Carrinho {
+import java.util.ArrayList;
 
-    private String livro;
-    private int numero;
-    private double preco;
+class Carrinho {
+    private Lista<Produto> itens;
 
-    public Carrinho (String livro, int numero, double preco) {
-        this.livro = livro;
-        this.numero = numero;
-        this.preco = preco;
+    public Carrinho() {
+        itens = new ArrayList<>();
     }
 
-    public String getLivro() {
-        return livro;
+    public void adicionarItem(Produto produto) {
+        itens.add(produto);
+        System.out.println("Produto adicionado ao carrinho com sucesso!");
     }
 
-    public void setLivro(String livro) {
-        this.livro = livro;
+    public void removerItem(Produto produto) {
+        itens.remove(produto);
+        System.out.println("Produto removido do carrinho com sucesso!");
     }
 
-    public int getNumero() {
-        return numero;
+    public void exibirCarrinho() {
+        System.out.println("Itens no carrinho:");
+        for (Produto item : itens) {
+            item.exibirDetalhes();
+        }
     }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    public double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-    
-
 }

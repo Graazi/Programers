@@ -1,20 +1,19 @@
-//herança
 package estoque;
-public class Livro extends Itens {
 
-    private int tamanho;
+class Livro extends Produto {
+    private String autor;
 
-    public Livro (String nome, double preco, int tamanho){
-        super (nome, preco);
-        this.tamanho = tamanho;
+    public Livro(String titulo, double preco, String autor) {
+        super(titulo, preco);
+        this.autor = autor;
     }
 
-    public int getTamanho() {
-        return tamanho;
+    @Override
+    public void exibirDetalhes() {
+        System.out.println("Livro: " + getTitulo());
+        System.out.println("Autor: " + autor);
+        System.out.println("Preço: R$" + getPreco());
+        System.out.println("---------------------------");
     }
-
-    public void setTamanho(int tamanho) {
-        this.tamanho = tamanho;
-    }
-
 }
+

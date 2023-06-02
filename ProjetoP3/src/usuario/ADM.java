@@ -1,27 +1,30 @@
 package usuario;
 
-public abstract class ADM extends Pessoa implements Comparable <ADM> {
+import java.util.ArrayList;
 
-    protected String matricula;
+class AreaAdministrativa {
+    private Lista<Produto> produtos;
 
-    public ADM(String matricula) {
-        this.matricula = matricula;
+    public AreaAdministrativa() {
+        produtos = new ArrayList<>();
     }
 
-    public ADM(String nome, String cpf, String matricula) {
-        super(nome, cpf);
-        this.matricula = matricula;
+    public void adicionarProduto(Produto produto) {
+        produtos.add(produto);
+        System.out.println("Produto adicionado com sucesso!");
     }
 
-    public String getMatricula() {
-        return matricula;
+    public void removerProduto(Produto produto) {
+        produtos.remove(produto);
+        System.out.println("Produto removido com sucesso!");
     }
 
-
-    @Override
-    public int compareTo(ADM a) {
-        int result;
-        result = this.getMatricula().compareTo(a.getMatricula());
-        return result;
+    public Produto buscarProdutoPorTitulo(String titulo) {
+        for (Produto produto : produtos) {
+            if (produto.getTitulo().equalsIgnoreCase(titulo)) {
+                return produto;
+            }
+        }
+        return null;
     }
 }
