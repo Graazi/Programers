@@ -10,7 +10,7 @@ public class Menu {
         private static Scanner scanner = new Scanner(System.in);
     
         public static void main(String[] args) {
-            int opcao;
+            int opcao, opcao2;
     
             do {
                 exibirMenu();
@@ -39,6 +39,26 @@ public class Menu {
                     case 7:
                         removerProdutoAreaAdministrativa();
                         break;
+                    case 8:
+                    
+                    exibeMenuDePagamento();
+                    opcao2 = scanner.nextInt();
+                    scanner.nextLine();
+
+                        switch (opcao2) {
+                            case 1: // pagamento no crédito
+                                System.out.println("Pagamento Aprovado");
+                                break;
+                            case 2: // pagamento no dédito
+                                System.out.println("Pagamento Aprovado");
+                                break;
+                            case 3: // pagamento no pix
+                                System.out.println("Pagamento Aprovado");
+                                break;
+                            default:
+                                System.out.println("Opção inválida!");
+                                break;
+                        }
                     case 0:
                         System.out.println("Obrigado por usar a Livraria Online. Volte sempre!");
                         break;
@@ -57,9 +77,19 @@ public class Menu {
             System.out.println("5 - Área Administrativa");
             System.out.println("6 - Adicionar Produto (Área Administrativa)");
             System.out.println("7 - Remover Produto (Área Administrativa)");
+            System.out.println("8 - Pagar");
             System.out.println("0 - Sair");
             System.out.print("Digite a opção desejada: ");
         }
+
+        public static void exibeMenuDePagamento() {
+            System.out.println(" ");
+            System.out.println("Escolha uma forma de pagamento: ");
+            System.out.println("1- Crédito");
+            System.out.println("2- Débito");
+            System.out.println("3- Pix");
+    }
+
     
         public static void cadastrarUsuario() {
             System.out.print("Digite o nome do usuário: ");
@@ -157,8 +187,8 @@ public class Menu {
             scanner.nextLine(); 
     
            
-            Produto produto = new Produto (titulo, preco);
-            ADM.adicionarProduto(produto);
+            //Produto produto = new Produto(titulo, preco);
+            //ADM.adicionarProduto(produto);
     
             System.out.println("Produto adicionado com sucesso!");
         }
