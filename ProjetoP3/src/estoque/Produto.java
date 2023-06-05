@@ -1,6 +1,6 @@
 package estoque;
 
-abstract class Produto {
+public class Produto {
     private String titulo;
     private double preco;
 
@@ -25,5 +25,6 @@ abstract class Produto {
         this.preco = preco;
     }
 
-    public abstract void exibirDetalhes();
+    public void exibirDetalhes() {
+    }
 }
