@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class ADM {
-    private List <Produto> produtos;
+    private static List <Produto> produtos;
 
     public ADM() {
         produtos = new ArrayList<>();

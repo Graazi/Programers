@@ -17,5 +17,13 @@ abstract class Produto {
         return preco;
     }
 
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
     public abstract void exibirDetalhes();
 }

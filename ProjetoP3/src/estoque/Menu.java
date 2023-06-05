@@ -1,4 +1,5 @@
 package estoque;
+import estoque.Produto;
 import java.util.Scanner;
 
 
@@ -156,7 +157,7 @@ public class Menu {
             scanner.nextLine(); 
     
            
-            Produto produto = new Produto(titulo, preco);
+            Produto produto = new Produto (titulo, preco);
             ADM.adicionarProduto(produto);
     
             System.out.println("Produto adicionado com sucesso!");
