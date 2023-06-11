@@ -74,8 +74,6 @@ public class Menu {
             System.out.println("3 - Remover Produto do Carrinho");
             System.out.println("4 - Exibir Carrinho de Compras");
             System.out.println("5 - Área Administrativa");
-            System.out.println("6 - Adicionar Produto (Área Administrativa)");
-            System.out.println("7 - Remover Produto (Área Administrativa)");
             System.out.println("8 - Pagar");
             System.out.println("0 - Sair");
             System.out.print("Digite a opção desejada: ");
@@ -148,6 +146,12 @@ public class Menu {
                             listarProdutosAreaAdministrativa();
                             break;
                         case 2:
+                            adicionarProdutoAreaAdministrativa();
+                            break;
+                        case 3:
+                            removerProdutoAreaAdministrativa();
+                            break;
+                        case 4:
                             
                             break;
                         case 0:
@@ -165,7 +169,9 @@ public class Menu {
         public static void exibirMenuAreaAdministrativa() {
             System.out.println("======== Área Administrativa ========");
             System.out.println("1 - Listar Produtos");
-            System.out.println("2 - Outra Funcionalidade");
+            System.out.println("2 - Adicionar Produto (Área Administrativa)");
+            System.out.println("3 - Remover Produto (Área Administrativa)");
+            System.out.println("4 - Outra Funcionalidade");
             System.out.println("0 - Voltar ao Menu Principal");
             System.out.print("Digite a opção desejada: ");
         }
