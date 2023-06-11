@@ -32,12 +32,6 @@ public class Menu {
                     case 5:
                         exibirAreaAdministrativa();
                         break;
-                    case 6:
-                        adicionarProdutoAreaAdministrativa();
-                        break;
-                    case 7:
-                        removerProdutoAreaAdministrativa();
-                        break;
                     case 8:
                     
                     exibeMenuDePagamento();
@@ -147,7 +141,13 @@ public class Menu {
                         case 1:
                             listarProdutosAreaAdministrativa();
                             break;
-                        case 2:
+                    case 2:
+                        adicionarProdutoAreaAdministrativa();
+                        break;
+                    case 3:
+                        removerProdutoAreaAdministrativa();
+                        break;
+                    case 4:
                             
                             break;
                         case 0:

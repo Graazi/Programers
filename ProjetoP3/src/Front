@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Livraria Online</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <h1>Livraria Online</h1>
+  
+  <!-- Formulário para adicionar livro ao carrinho -->
+  <h2>Adicionar Livro ao Carrinho</h2>
+  <form id="add-to-cart-form">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" name="titulo"><br>
+    
+    <label for="autor">Autor:</label>
+    <input type="text" id="autor" name="autor"><br>
+    
+    <label for="preco">Preço:</label>
+    <input type="text" id="preco" name="preco"><br>
+    
+    <button type="button" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+  </form>
+  
+  <!-- Lista de livros disponíveis -->
+  <h2>Lista de Livros</h2>
+  <ul id="lista-livros">
+    <!-- Livros serão carregados dinamicamente via AJAX -->
+  </ul>
+  
+  <!-- Carrinho de compras -->
+  <h2>Carrinho de Compras</h2>
+  <ul id="carrinho">
+    <!-- Itens do carrinho serão carregados dinamicamente via AJAX -->
+  </ul>
+  
+  <!-- Botão para finalizar a compra -->
+  <button type="button" onclick="finalizarCompra()">Finalizar Compra</button>
+  
+  <script>
+    // Função para carregar os livros disponíveis via AJAX
+    function carregarLivros() {
+      $.ajax({
+        url: 'Projetop3/exibirLivros.java', 
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+          var listaLivros = $('#lista-livros');
+          listaLivros.empty(); // Limpar a lista de livros antes de adicionar os novos itens
+          
+          // Iterar sobre os livros recebidos e adicionar à lista
+          $.each(data, function(index, livro) {
+            listaLivros.append('<li>' + livro.titulo + ' - ' + livro.autor + '</li>');
+          });
+        },
+        error: function() {
+          console.log('Erro ao exibir os livros.');
+        }
+      });
+    }
+    
+    // Função para adicionar um livro ao carrinho via AJAX
+    function adicionarAoCarrinho() {
+      var titulo = $('#titulo').val();
+      var preco = $('#preco').val();
+      
+      $.ajax({
+        url: 'ProjetoP3/adicionarAoCarrinho.java', 
+        type: 'POST',
+        data: { titulo: titulo, autor: autor, preco: preco },
+        dataType: 'json',
+        success: function(response) {
+          if (response.success) {
+            console.log('Livro adicionado ao carrinho com sucesso.');
+            carregarCarrinho(); // Atualizar a lista do carrinho após adicionar um livro
+          } else {
+            console.log('Erro ao adicionar livro ao carrinho: ' + response.message);
+          }
+        },
+        error: function() {
+          console.log('Erro ao adicionar livro ao carrinho.');
+        }
+      });
+    }
+    
+    // Função para carregar o carrinho de compras via AJAX
+    function carregarCarrinho() {
+      $.ajax({
+        url: 'backend/carregarCarrinho.java', 
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+          var carrinho = $('#carrinho');
+          carrinho.empty(); // Limpar o carrinho antes de adicionar os novos itens
+          
+          // Iterar sobre os itens do carrinho recebidos e adicionar à lista
+          $.each(data, function(index, item) {
+            carrinho.append('<li>' + item.titulo + ' - ' + item.preco + '</li>');
+          });
+        },
+        error: function() {
+          console.log('Erro ao carregar o carrinho de compras.');
+        }
+      });
+    }
+    
+    // Função para finalizar a compra via AJAX
+    function finalizarCompra() {
+      $.ajax({
+        url: 'ProjetoP3/finalizarCompra.java', 
+        type: 'POST',
+        dataType: 'json',
+        success: function(response) {
+          if (response.success) {
+            console.log('Compra finalizada com sucesso.');
+            carregarCarrinho(); // Atualizar o carrinho após finalizar a compra
+          } else {
+            console.log('Erro ao finalizar a compra: ' + response.message);
+          }
+        },
+        error: function() {
+          console.log('Erro ao finalizar a compra.');
+        }
+      });
+    }
+    
+    // Carregar os livros e o carrinho ao carregar a página
+    $(document).ready(function() {
+      carregarLivros();
+      carregarCarrinho();
+    });
+  </script>
+</body>
+</html>
