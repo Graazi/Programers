@@ -11,7 +11,7 @@ Funcionalidades do objeto:
 
 Cliente: adcionar, remover e exibir produtos no carrinho, e pagar.
 
-Administrador: listar produtos cadastrados
+Administrador: adicionar, reemover e listar produtos cadastrados
 
 Funcionamento do sistema:
 
