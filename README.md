@@ -9,9 +9,9 @@ Cliente e Administrador.
 
 Funcionalidades do objeto:
 
-Cliente: 
+Cliente: adcionar, remover e exibir produtos no carrinho, e pagar.
 
-Administrador: 
+Administrador: listar produtos cadastrados
 
 Funcionamento do sistema:
 
