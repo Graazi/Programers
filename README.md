@@ -4,7 +4,7 @@
 
 Integrantes do grupo:
   Graziela de Oliveira Gonçalves
-  José Rafael Santos Rosal
+    José Rafael Santos Rosal
 
 ### Objetos:
 
