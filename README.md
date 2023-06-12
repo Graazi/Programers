@@ -20,4 +20,4 @@ Caso seja Administrador, entra em outro menu e pode escolher entre adicionar (ca
 
 Caso seja Cliente, pode se cadastrar, adicionar um produto no carrinho e remover o mesmo, também pode exibir os produtos do carrinho e pagar escolhendo a forma como pagar.
 
-https://www.canva.com/design/DAFligl_adU/0K6O0Y6J4-UR0G_TR6ivVA/edit?analyticsCorrelationId=302a1cb8-65ed-4a67-ac34-404cc5d2fbf2
+[Canva do Projeto](https://www.canva.com/design/DAFligl_adU/0K6O0Y6J4-UR0G_TR6ivVA/edit?analyticsCorrelationId=302a1cb8-65ed-4a67-ac34-404cc5d2fbf2)
