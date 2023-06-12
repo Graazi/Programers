@@ -1,8 +1,6 @@
 package estoque;
 import java.util.Scanner;
 
-
-
 public class Menu {
         private static Carrinho carrinho = new Carrinho();
         private static Scanner scanner = new Scanner(System.in);
