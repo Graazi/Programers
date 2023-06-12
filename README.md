@@ -2,9 +2,9 @@
 
 ## O projeto contêm a ideia de uma livraria online!
 
-Integrantes do grupo:
-<p>Graziela de Oliveira Gonçalves</p>
-<p>José Rafael Santos Rosal</p>
+  Integrantes do grupo:
+    <p>Graziela de Oliveira Gonçalves</p>
+    <p>José Rafael Santos Rosal</p>
 
 ### Objetos:
 
