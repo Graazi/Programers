@@ -14,7 +14,7 @@
 
   Cliente: adicionar, remover e exibir produtos no carrinho, e pagar.
 
-  Administrador: adicionar, remover e listar produtos cadastrados
+  Administrador: adicionar, remover e listar produtos cadastrados.
 
 ### Funcionamento do sistema:
 
