@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class Menu {
         private static Carrinho carrinho = new Carrinho();
-        private static ADM adm = new ADM();
         private static Scanner scanner = new Scanner(System.in);
     
         public static void main(String[] args) {
@@ -84,7 +83,6 @@ public class Menu {
     
         public static void cadastrarUsuario() {
             System.out.print("Digite o nome do usuário: ");
-            String nome = scanner.nextLine();
     
            
             System.out.println("Usuário cadastrado com sucesso!");
